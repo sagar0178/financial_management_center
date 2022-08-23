@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Data table css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+    <!-- mdbootstrap -->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Finance Management System</title>
+</head>
+
+
+
+<body>
+
+
+
+    <!--Main Navigation-->
+    <header>
+
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white shadow">
+            <div class="position-sticky">
+                <div class="logo text-center">
+                    <img height="200"
+                        src="https://cdn.shopify.com/shopifycloud/hatchful_web_two/bundles/4a14e7b2de7f6eaf5a6c98cb8c00b8de.png"
+                        alt="">
+                </div>
+                <div class="list-group list-group-flush mt-4">
+                    <!-- Collapse 1 -->
+
+                    <a class="list-group-item list-group-item-action py-3 ripple active-btn" href="#customerdetails_id">
+                        <i class="fas fa-users me-3"></i><span>Customer Management </span>
+                    </a>
+                    <!-- Collapsed content -->
+
+                    <!-- Collapse 2 -->
+                    <a class="list-group-item list-group-item-action py-3 ripple" href="#employeedetails_id">
+                        <i class="fas fa-briefcase me-3"></i><span>Employee</span>
+                    </a>
+
+                    <a class="list-group-item list-group-item-action py-3 ripple" href="#accountdetails_id">
+                        <i class="fas fa-dollar-sign me-3"></i></i><span>Capital</span>
+                    </a>
+
+                    <a class="list-group-item  list-group-item-action py-3 ripple" href="#borrowed_id"></i><span
+                            class="align-middle">
+                            <i class="fas fa-chart-area me-3"></i>
+                            Others
+                        </span>
+                        <span class="ms-3 badge badge-danger rounded-circle align-middle my-auto"
+                            style="padding-top:0.6rem; width:2rem; height:2rem;">
+                            33
+                        </span>
+                    </a>
+
+
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <!-- Sidebar -->
+
+        <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+            <!-- Container wrapper -->
+
+
+
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Right links -->
+                <ul class="navbar-nav ms-auto d-flex flex-row shadow">
+                    <!-- Notification dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#"
+                            id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Some news</a></li>
+                            <li><a class="dropdown-item" href="#">Another news</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link me-3 me-lg-0" href="#">
+                            <i class="fas fa-fill-drip"></i>
+                        </a>
+                    </li>
+                    <!-- Icon -->
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+
+                    <!-- Icon dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown"
+                            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-earth-asia"></i>
+                            <i class="united kingdom flag m-0"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English
+                                    <i class="fa fa-check text-success ms-2"></i></a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="poland flag"></i>Polski</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="china flag"></i>中文</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="japan flag"></i>日本語</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="germany flag"></i>Deutsch</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="france flag"></i>Français</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="spain flag"></i>Español</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="russia flag"></i>Русский</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><i class="portugal flag"></i>Português</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Avatar -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" style="width:auto;"
+                            id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <img src="https://media.istockphoto.com/photos/studio-portrait-of-african-man-for-id-passport-photo-picture-id944987450?k=20&m=944987450&s=170667a&w=0&h=npbCoygkkGN6brBljH-kvOHLlZQWVE8W62v4veiGiX8="
+                                class="rounded-circle" height="30" alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">My profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+
+
+    <!--Main layout-->
+    <main style="margin-top: 58px;">
+        <div class="pt-4 px-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card bg-warning mb-4 shadow rounded-9">
+                        <div class="card-body text-white">
+                            <div class="money fw-bold" style="font-size: 3rem;">$4,000</div>
+                            <div class="text small">
+                                Total Money Earned
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card bg-info mb-4 shadow rounded-9">
+                        <div class="card-body text-white">
+                            <div class="money fw-bold" style="font-size: 3rem;">$4,000</div>
+                            <div class="text small">
+                                Total Money Earned
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card bg-secondary mb-4 shadow rounded-9">
+                        <div class="card-body text-white">
+                            <div class="money fw-bold" style="font-size: 3rem;">$4,000</div>
+                            <div class="text small">
+                                Total Money Earned
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- data tables -->
+            <br>
+            <div class="card rounded-6">
+                <div class="card-body">
+                    <div class="fs-2 fw-bold mb-4">Customer Details</div>
+                    <table id="customerdetails_id" class="table table-sm text-muted" style="font-size: 0.9rem;">
+                        <thead>
+                            <tr>
+                                <th>CDID</th>
+                                <th>Client Name</th>
+                                <th>Work</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Amount</th>
+                                <th>Remarks</th>
+                                <th>Acc clerance Date</th>
+                                <th>Payment Method</th>
+                                <th>Additional Remarks</th>
+                                <th>Bill Type</th>
+                                <th>VAT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>sagar sapkota</td>
+                                <td>Web Development</td>
+                                <td>2079-04-05</td>
+                                <td>2079-05-09</td>
+                                <td>Rs 500000</td>
+                                <td>paid</td>
+                                <td>2079-04-29</td>
+                                <td><span class="badge badge-success">Esewa</span></td>
+                                <td>Fully paid</td>
+                                <td>None</td>
+                                <td>550</td>
+
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ram sapkota</td>
+                                <td>App Development</td>
+                                <td>2079-01-05</td>
+                                <td>2079-03-09</td>
+                                <td>Rs 1000000</td>
+                                <td>Not paid</td>
+                                <td>2079-03-29</td>
+                                <td><span class="badge badge-info">Cash</span></td>
+                                <td>Fully paid</td>
+                                <td>VAT</td>
+                                <td>5550</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h1>Customer Account</h1>
+            <table id="customeraccount_id" class="display">
+                <thead>
+                    <tr>
+                        <th>CAID</th>
+                        <th>Client Name</th>
+                        <th>Amount</th>
+                        <th>Remarks</th>
+                        <th>Acc clerance Date</th>
+                        <th>Payment Method</th>
+                        <th>Additional Remarks</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>sagar sapkota</td>
+                        <td>Rs 500000</td>
+                        <td>paid</td>
+                        <td>2079-04-29</td>
+                        <td>Esewa</td>
+                        <td>Fully paid</td>
+
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ram sapkota</td>
+                        <td>Rs 1000000</td>
+                        <td>Not paid</td>
+                        <td>2079-03-29</td>
+                        <td>Cash</td>
+                        <td>Fully paid</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1>Customer Work</h1>
+            <table id="customerwork_id" class="display">
+                <thead>
+                    <tr>
+                        <th>CWID</th>
+                        <th>Index</th>
+                        <th>Work</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>WD</td>
+                        <td>Web Development</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>SMM</td>
+                        <td>Social Media Manager</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1>Employee Details</h1>
+            <table id="employeedetails_id">
+                <thead>
+                    <tr>
+                        <th>EID</th>
+                        <th>Name</th>
+                        <th>Degination</th>
+                        <th>Salary</th>
+                        <th>Bonus</th>
+                        <th>Fine/Expenses</th>
+                        <th>Total Salary</th>
+                        <th>Date</th>
+                        <th>Payment Methods</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ram Dhimal</td>
+                        <td>Junior Developer</td>
+                        <td>Rs 50000</td>
+                        <td>Rs 2000</td>
+                        <td>Rs 0</td>
+                        <td>Rs 52000</td>
+                        <td>2079-04-01</td>
+                        <td>Bank Transaction</td>
+                        <td>paid</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Samundra Timalsina</td>
+                        <td>Senior Developer</td>
+                        <td>Rs 80000</td>
+                        <td>Rs 10000</td>
+                        <td>Rs 0</td>
+                        <td>Rs 90000</td>
+                        <td>2079-04-01</td>
+                        <td>Bank Transaction</td>
+                        <td>paid</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h1>Employee Salary</h1>
+            <table id="employeesalary_id" class="display">
+                <thead>
+                    <tr>
+                        <th>EID</th>
+                        <th>Total Salary</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Rs 52000</td>
+                        <td>paid</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Rs 90000</td>
+                        <td>paid</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- cards for income, expenditure and total balance -->
+
+
+        </div>
+        <div class="card text-white bg-success mb-3 rounded-9" style="max-width: 18rem;">
+            <div class="card-header">Income(In)</div>
+            <div class="card-body">
+                <h5 class="card-title">Rs 285000</h5>
+            </div>
+        </div>
+        <div class="card text-white bg-danger mb-3 rounded-9" style="max-width: 18rem;">
+            <div class="card-header">Expenditure(Out)</div>
+            <div class="card-body">
+                <h5 class="card-title">Rs 75000</h5>
+            </div>
+        </div>
+        </div>
+        <div class="card text-body bg-info mb-3 rounded-9" style="max-width: 18rem;">
+            <div class="card-header">Total Balance</div>
+            <div class="card-body">
+                <h5 class="card-title">Rs 210000</h5>
+            </div>
+        </div>
+
+
+
+        <!-- table for account details -->
+        <h1>Account Details</h1>
+        <table id="accountdetails_id" class="display">
+            <thead>
+                <tr>
+                    <th>AID</th>
+                    <th>Account</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Income(money in)</th>
+                    <th>Expenditures(money out)</th>
+                    <th>Overall Balance</th>
+                    <th>Remarks</th>
+                    <th>Bill Type</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Cash</td>
+                    <td>2079-04-01</td>
+                    <td>hello</td>
+                    <td>Capital</td>
+                    <td>Rs 2000</td>
+                    <td>Rs 5200</td>
+                    <td>Rs 52000</td>
+                    <td>Year 2078</td>
+                    <td>VAT</td>
+
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Esewa</td>
+                    <td>2079-04-01</td>
+                    <td>hello</td>
+                    <td>Earning</td>
+                    <td>Rs 2000</td>
+                    <td>Rs 5200</td>
+                    <td>Rs 52000</td>
+                    <td>Year 2078</td>
+                    <td>None</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h1>Income</h1>
+        <table id="income_id" class="display">
+            <thead>
+                <tr>
+                    <th>IID</th>
+                    <th>Area of Income</th>
+                    <th>Expected Total</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Client Project</td>
+                    <td>Rs 80000</td>
+                    <td>Not recived</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>App Maintainance</td>
+                    <td>RS 70000</td>
+                    <td>Recived</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <h1>Expenditure</h1>
+        <table id="expenses_id" class="display">
+            <thead>
+                <tr>
+                    <th>EXID</th>
+                    <th>Employee Expenses</th>
+                    <th>Expected Total</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Salary</td>
+                    <td>Rs 50000</td>
+                    <td>Not paid</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Others</td>
+                    <td>RS 7000</td>
+                    <td>Paid</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        </div>
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header">Borrowed</div>
+            <div class="card-body">
+                <h5 class="card-title">Rs 285000</h5>
+            </div>
+        </div>
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-header">Lended</div>
+            <div class="card-body">
+                <h5 class="card-title">Rs 75000</h5>
+            </div>
+        </div>
+        </div>
+        <div class="card text-body bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">Invested</div>
+            <div class="card-body">
+                <h5 class="card-title">Rs 710000</h5>
+            </div>
+        </div>
+
+
+        <h1>Borrowed</h1>
+        <table id="borrowed_id" class="display">
+            <thead>
+                <tr>
+                    <th>BID</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>sagar cooparative PVT LTD </td>
+                    <td>Rs 50000</td>
+                    <td>Not paid</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>NIC Asia </td>
+                    <td>RS 7000</td>
+                    <td>Bank</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Lended</h1>
+        <table id="lended_id" class="display">
+            <thead>
+                <tr>
+                    <th>LID</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>sagar cooparative PVT LTD </td>
+                    <td>Rs 50000</td>
+                    <td>Not paid</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>NIC Asia </td>
+                    <td>RS 7000</td>
+                    <td>Bank</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Invested</h1>
+        <table id="invested_id" class="display">
+            <thead>
+                <tr>
+                    <th>INID</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>sagar cooparative PVT LTD </td>
+                    <td>Rs 50000</td>
+                    <td>Not paid</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>NIC Asia </td>
+                    <td>RS 7000</td>
+                    <td>Bank</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+    </main>
+    <!--Main layout-->
+
+
+
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <!-- datatable javascript -->
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#customerdetails_id').DataTable({
+                width: '100%',
+            });
+            $('#customeraccount_id').DataTable();
+            $('#customerwork_id').DataTable();
+            $('#employeedetails_id').DataTable();
+            $('#employeesalary_id').DataTable();
+            $('#accountdetails_id').DataTable();
+            $('#income_id').DataTable();
+            $('#expenses_id').DataTable();
+            $('#borrowed_id').DataTable();
+            $('#lended_id').DataTable();
+            $('#invested_id').DataTable();
+
+
+
+
+        });
+    </script>
+
+    <script src="./code.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+body {
+    background: #fbfbfb;
+}
+
+@media (min-width: 991.98px) {
+    main {
+        padding-left: 300px;
+    }
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0;
+
+
+    /* Height of navbar */
+
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%),
+        0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 300px;
+    z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 100%;
+
+    }
+}
+
+.sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+.navbar-nav {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.navbar-nav a {
+    color: var(--mdb-warning);
+}
+
+.navbar-nav a .badge {
+    background-color: black !important;
+
+}
+
+#main-navbar {
+    box-shadow: none;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+th {
+    color: rgb(127, 142, 255);
+}
+
+/* card modification */
+
+
+.card h3,
+p {
+    text-align: center;
+}
+
+table,
+.dataTables_filter {
+    margin-bottom: 1rem;
+}
+
+
+.dataTables_info,
+.dataTables_paginate {
+    margin-top: 1rem;
+}
+
+td {
+    padding: 1.2rem !important;
+}
+
+.card .money {
+    line-height: 1.2;
+}
+
+/*  sidebar menu gap distance */
+
+
+
+.list-group-flush>.list-group-item {
+    border-width: 0;
+    padding: 2rem 0 2rem 3rem !important;
+}
+
+.list-group-flush>.list-group-item.active-btn {
+    border-right: 3px groove var(--mdb-warning);
+    background-color: #f1f1f1;
+}
+
+
+.title {
+    text-align: center;
+}
+
+
+#sidebarMenu i {
+    font-size: 1.2rem;
+}
